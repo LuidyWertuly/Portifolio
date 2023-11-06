@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*-----------------------darkmode-----------------------*/
+
+body{
+    overflow-x: hidden;
+    background-color: var(--body-color);
+}
+
+:root {
+    --body-color: white;
+    --bnt-color: #4169e1;
+    --bnt-hover-color: blue;
+    --text-color: black;
+    --text-light-color: white;
+    --border-color: #ccc;
+    --bnt-top-color: #cccccc80;
+    --shadow-color: rgba(0, 0, 0, 0.342);
+}
+
+.darkmode{
+    --text-color: white;
+    --body-color: #18191a;
+}
+
+/*-----------------------darkmode-----------------------*/
+
+/*-----------------------Divisor-----------------------*/
+
+.divisor{
+    border-bottom: 2px solid var(--border-color);
+}
+
+/*-----------------------Divisor-----------------------*/
+
+/*-----------------------RollToTop-----------------------*/
+
+#bnt-top{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bnt-top-color);
+    border-radius: 100%;
+    border: none;
+    margin:0;
+    padding: 0;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+
+#bnt-top img{
+    width: 40px;
+}
+
+/*-----------------------RollToTop-----------------------*/
+
+/*-----------------------header-----------------------*/
+
+header{
+    border: 1px solid var(--border-color);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.logo{
+    cursor: pointer;
+    color: var(--bnt-color);
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.logo h1:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.menu a:hover{
+    color: var(--bnt-color);
+}
+
+menu a:active{
+    color: var(--bnt-color);
+}
+
+.menu button{
+    color: var(--text-color);
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    padding: 16px;
+}
+
+#bnt-mobile{
+    font-size: 30px;
+    display: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    background-color: var(--body-color);
+}
+
+/*-----------------------header-----------------------*/
+
+/*-----------------------Main-----------------------*/
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin-top: 35px;
+}
+
+.text-main{
+    color: var(--text-color);
+    padding: 40px;
+    width: 50%;
+    line-height: 1.2;
+    text-align: start;
+}
+
+.text-main button{
+    cursor: pointer;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: var(--text-light-color);
+    background-color: var(--bnt-color);
+}
+
+.text-main button:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    background-color: var(--bnt-hover-color);
+}
+
+.img-main{
+    width: 50%;
+}
+
+.img-main img{
+    width: 100%;
+}
+
+/*-----------------------Main-----------------------*/
+
+/*-----------------------Sobre-mim-----------------------*/
+
+.sobre-mim{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.img-sobre-mim{
+    width: 40%;
+    margin-right: 20px;
+}
+
+.img-sobre-mim img{
+    width: 100%;
+}
+
+.text-sobre-mim{
+    width: 50%;
+    padding: 40px;
+    border: 2px solid var(--border-color);
+    border-radius: 40px;
+    box-shadow: 2px 2px 1px var(--shadow-color);
+    text-align: center;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+/*-----------------------Sobre-mim-----------------------*/
+
+/*-----------------------projetos-----------------------*/
+
+.projetos{
+    padding: 40px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.projetos-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    padding: 40px;
+    width: 90%;
+}
+
+.box,.box-hidden{
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    margin: 10px;
+    height: 195px;
+    width: 310px;
+    background-color: #C4C4C4;
+    color: var(--text-light-color);
+    overflow: hidden;
+}
+
+.box-hidden{
+    cursor: pointer;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    margin: 10px;
+    height: 195px;
+    width: 310px;
+    background-color: #C4C4C4;
+    color: var(--text-light-color);
+    overflow: hidden;
+}
+
+.box:hover,.box-hidden:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+
+}
+
+.box:hover .em-breve, .box-hidden:hover .em-breve {
+    background-color: var(--bnt-hover-color);
+}
+
+.em-breve{
+    background-color: var(--bnt-color);
+   width: 100%;
+    padding: 20px;
+    text-align: center;
+    transform: rotate(-50deg);
+}
+
+#ver-mais{
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: var(--text-light-color);
+    background-color: var(--bnt-color);
+}
+
+#ver-mais:hover{
+    background-color: var(--bnt-hover-color);
+}
+
+.projetos-links{
+    margin-top: 30px;
+}
+
+.projetos-links a{
+    color: var(--text-color);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.projetos-links a:hover{
+    color: var(--bnt-color);
+}
+
+/*-----------------------projetos-----------------------*/
+
+/*-----------------------footer-----------------------*/
+
+.footer{
+    display: flex;
+    border: 1px solid var(--border-color);
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--bnt-color);
+    color: var(--text-light-color);
+}
+
+/*-----------------------footer-----------------------*/
