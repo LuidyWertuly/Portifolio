@@ -60,7 +60,3 @@ window.addEventListener('DOMContentLoaded', function() {
 //menu-mobile
 
 //menu-mobile
-
-//botao-ver-mais
-
-//botao-ver-mais

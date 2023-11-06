@@ -242,6 +242,22 @@ header{
     overflow: hidden;
 }
 
+.box-hidden{
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    margin: 10px;
+    height: 195px;
+    width: 310px;
+    background-color: var(--box-color);
+    color: var(--text-light-color);
+    overflow: hidden;
+    display: none;
+    transition: 1000ms;
+}
+
 .conteudo{
     display: none;
     color: black;
@@ -265,23 +281,8 @@ header{
     color: var(--bnt-color);
 }
 
-.box:hover .conteudo{
+.box:hover .conteudo, .box-hidden:hover .conteudo{
     display: block;
-}
-
-.box-hidden{
-    cursor: pointer;
-    border-radius: 20px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border-color);
-    margin: 10px;
-    height: 195px;
-    width: 310px;
-    background-color: var(--box-color);
-    color: var(--text-light-color);
-    overflow: hidden;
 }
 
 .box:hover,.box-hidden:hover{
@@ -301,7 +302,7 @@ header{
     transform: rotate(-50deg);
 }
 
-#ver-mais{
+#verMais{
     cursor: pointer;
     border: none;
     padding: 10px 20px;
@@ -311,7 +312,7 @@ header{
     background-color: var(--bnt-color);
 }
 
-#ver-mais:hover{
+#verMais:hover{
     background-color: var(--bnt-hover-color);
 }
 
