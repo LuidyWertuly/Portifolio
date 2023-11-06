@@ -14,19 +14,22 @@ body{
 }
 
 :root {
-    --body-color: white;
+    --body-color: #18191a;
     --bnt-color: #4169e1;
     --bnt-hover-color: blue;
-    --text-color: black;
+    --text-color: #4169e1;
     --text-light-color: white;
     --border-color: #ccc;
     --bnt-top-color: #cccccc80;
     --shadow-color: rgba(0, 0, 0, 0.342);
+    --box-color: #C4C4C4;
+    --case-color: #212121;
 }
 
 .darkmode{
-    --text-color: white;
-    --body-color: #18191a;
+    --text-color: black;
+    --body-color: white;
+    --case-color: #C4C4C4;
 }
 
 /*-----------------------darkmode-----------------------*/
@@ -83,15 +86,10 @@ header{
 
 .logo{
     cursor: pointer;
-    color: var(--bnt-color);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     align-content: center;
-}
-
-.logo h1:hover{
-    transform: scale(1.1);
-    transition: all 0.3s;
 }
 
 .menu{
@@ -110,10 +108,6 @@ header{
 }
 
 .menu a:hover{
-    color: var(--bnt-color);
-}
-
-menu a:active{
     color: var(--bnt-color);
 }
 
@@ -211,6 +205,7 @@ menu a:active{
     text-align: center;
     line-height: 1.4;
     color: var(--text-color);
+   /* background-color: var(--case-color);*/
 }
 
 /*-----------------------Sobre-mim-----------------------*/
@@ -233,8 +228,7 @@ menu a:active{
     width: 90%;
 }
 
-.box,.box-hidden{
-    cursor: pointer;
+.box{
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -243,9 +237,36 @@ menu a:active{
     margin: 10px;
     height: 195px;
     width: 310px;
-    background-color: #C4C4C4;
+    background-color: var(--box-color);
     color: var(--text-light-color);
     overflow: hidden;
+}
+
+.conteudo{
+    display: none;
+    color: black;
+    text-align: center;
+}
+
+.conteudo p{
+    margin-bottom: 5px;
+}
+
+#estado{
+    position: absolute;
+    left: 5px;
+    top: 160px;
+    color: green;
+    border-bottom: 1px solid green;
+}
+
+.conteudo a{
+    text-decoration: none;
+    color: var(--bnt-color);
+}
+
+.box:hover .conteudo{
+    display: block;
 }
 
 .box-hidden{
@@ -258,7 +279,7 @@ menu a:active{
     margin: 10px;
     height: 195px;
     width: 310px;
-    background-color: #C4C4C4;
+    background-color: var(--box-color);
     color: var(--text-light-color);
     overflow: hidden;
 }
@@ -266,7 +287,6 @@ menu a:active{
 .box:hover,.box-hidden:hover{
     transform: scale(1.1);
     transition: all 0.5s;
-
 }
 
 .box:hover .em-breve, .box-hidden:hover .em-breve {
@@ -311,6 +331,68 @@ menu a:active{
 
 /*-----------------------projetos-----------------------*/
 
+/*-----------------------dados-projetos-----------------------*/
+
+#projeto1{
+    background-image: url(../image/telecall-front-end.png);
+    background-size: cover;
+}
+
+#projeto1:hover{
+    background-color: var(--box-color);
+    background-image: none;
+}
+
+/*------------------------------------------------------------*/
+
+#projeto2{
+    background-image: url(../image/);
+    background-size: cover;
+}
+
+#projeto2:hover{
+    background-color: var(--box-color);
+    background-image: none;
+}
+
+/*------------------------------------------------------------*/
+
+#projeto3{
+    background-image: url(../image/);
+    background-size: cover;
+}
+
+#projeto3:hover{
+    background-color: var(--box-color);
+    background-image: none;
+}
+
+/*------------------------------------------------------------*/
+
+#projeto4{
+    background-image: url(../image/);
+    background-size: cover;
+}
+
+#projeto4:hover{
+    background-color: var(--box-color);
+    background-image: none;
+}
+
+/*------------------------------------------------------------*/
+
+#projeto5{
+    background-image: url(../image/);
+    background-size: cover;
+}
+
+#projeto5:hover{
+    background-color: var(--box-color);
+    background-image: none;
+}
+
+/*-----------------------dados-projetos-----------------------*/
+
 /*-----------------------habilidades-----------------------*/
 
 .habilidades{
@@ -319,21 +401,114 @@ menu a:active{
     color: var(--text-color);
 }
 
+.cases{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-case{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    width: 12rem;
+    margin: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--case-color);
+    color: var(--text-color);
+    height: 8rem;
+    border-bottom: 5px solid var(--bnt-color);
+}
+
+.box-case p{
+    margin-bottom: 30px;
+}
+
+.box-case i{
+    font-size: 50px;
+}
+
+.box-case img{
+    width: 64px;
+}
+
+.box-case:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
 /*-----------------------habilidades-----------------------*/
 
 
 /*-----------------------footer-----------------------*/
 
-.footer{
+.contato{
+    border-top: 1px solid  var(--border-color);
+    color: var(--text-color);
+    text-align: center;
+    height: auto;
+    padding-top: 20px;
+}
+
+.contato h3{
+    margin-bottom: 10px;
+}
+
+.icon-box{
     display: flex;
-    border: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 40px;
+    width: 15rem;
+    height: 12rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 1px var(--shadow-color);
+    border-radius: 40px;
+}
+
+.icon a{
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.icon a i{
+    color: var(--text-color);
+}
+
+.img-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--case-color);
+    border-radius: 50%;
+}
+
+.icon:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 footer{
     text-align: center;
     padding: 10px;
-    background-color: var(--bnt-color);
-    color: var(--text-light-color);
+    background-color: var(--case-color);
+    color: var(--text-color);
 }
 
 /*-----------------------footer-----------------------*/
