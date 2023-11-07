@@ -310,20 +310,13 @@ header{
     overflow: hidden;
 }
 
-.box-hidden{
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border-color);
-    margin: 10px;
-    height: 195px;
-    width: 310px;
-    background-color: var(--box-color);
-    color: var(--text-light-color);
-    overflow: hidden;
+.oculto{
     display: none;
     transition: 1000ms;
+}
+
+.oculto.active{
+    display: flex;
 }
 
 .box-image{
@@ -358,20 +351,20 @@ header{
     color: var(--bnt-color);
 }
 
-.box:hover .conteudo, .box-hidden:hover .conteudo{
+.box:hover .conteudo{
     display: block;
 }
 
-.box:hover .box-image, .box-hidden:hover .box-image{
+.box:hover .box-image{
     display: none;
 }
 
-.box:hover,.box-hidden:hover{
+.box:hover{
     transform: scale(1.1);
     transition: all 0.5s;
 }
 
-.box:hover .em-breve, .box-hidden:hover .em-breve {
+.box:hover .em-breve{
     background-color: var(--bnt-hover-color);
 }
 
@@ -480,6 +473,7 @@ header{
 
 .icon-box{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -532,3 +526,40 @@ footer{
 }
 
 /*-----------------------footer-----------------------*/
+
+/*-----------------------responsivo-----------------------*/
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 768px){
+
+    header{
+        width: 100%;
+    }
+    
+    #bnt-mobile{
+        display: block;
+    }
+    
+    .menu{
+        display: none;
+    }
+    
+    .menu.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--body-color);
+        height: 100vh;
+        border: 1px solid var(--border-color);
+        width: 40%;
+        z-index: 999;
+    }
+
+}
+
+/*-----------------------responsivo-----------------------*/

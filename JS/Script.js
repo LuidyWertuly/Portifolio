@@ -58,5 +58,33 @@ window.addEventListener('DOMContentLoaded', function() {
 //darkmode
 
 //menu-mobile
+ 
+function openmenu(){
+
+    //difinindo outra constante
+    const menu = document.getElementById('menu');
+
+    //adicionando a classe 'active' ao elemento
+    menu.classList.toggle('active');
+};
 
 //menu-mobile
+
+//botão ver mais
+
+function ver_mais(){
+
+    const boxesHidden = document.querySelectorAll('.oculto');
+    const bnt_verMais = document.getElementById('verMais');
+
+    boxesHidden.forEach(boxHidden => boxHidden.classList.toggle('active'));
+
+    if(boxesHidden[0].classList.contains('active')){
+        bnt_verMais.innerHTML = 'Ver menos';
+    } else {
+        bnt_verMais.innerHTML = 'Ver mais';
+    }
+    
+}
+
+//botão ver mais
