@@ -18,6 +18,7 @@ body{
     --bnt-color: #4169e1;
     --bnt-hover-color: blue;
     --text-color: #4169e1;
+    --text-normal-color: white;
     --text-light-color: white;
     --border-color: #ccc;
     --bnt-top-color: #cccccc80;
@@ -28,8 +29,9 @@ body{
 
 .darkmode{
     --text-color: black;
-    --body-color: white;
+    --body-color: #e4e4e4;
     --case-color: #C4C4C4;
+    --text-normal-color: black;
 }
 
 /*-----------------------darkmode-----------------------*/
@@ -75,7 +77,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--body-color);
+    background-color: var(--case-color);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,7 +102,7 @@ header{
 
 .menu a{
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--bnt-color);
     display: block;
     padding: 16px;
     font-size: 16px;
@@ -108,11 +110,11 @@ header{
 }
 
 .menu a:hover{
-    color: var(--bnt-color);
+    color: var(--bnt-hover-color);
 }
 
 .menu button{
-    color: var(--text-color);
+    color: var(--bnt-color);
     cursor: pointer;
     margin: 5px;
     border: none;
@@ -121,6 +123,11 @@ header{
     font-size: 16px;
     padding: 16px;
 }
+
+.menu button:hover{
+    color: var(--bnt-hover-color);
+}
+
 
 #bnt-mobile{
     font-size: 30px;
@@ -145,19 +152,73 @@ header{
 }
 
 .text-main{
-    color: var(--text-color);
-    padding: 40px;
+    color: var(--text-normal-color);
+    padding: 40px 320px 40px 40px;
     width: 50%;
     line-height: 1.2;
     text-align: start;
 }
 
+.moldura{
+    border-bottom: 5px solid var(--bnt-color);
+    border-left: 5px solid var(--bnt-color);
+    border-radius: 20px;
+    padding: 5px;
+    background-color: var(--case-color);
+}
+
+.main-bnt{
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.main-links{
+    padding: 5px;
+    display: flex;
+}
+
+.main-icon{
+    background-color: var(--body-color);
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.main-icon a{
+    text-decoration: none;
+    color: var(--text-normal-color);
+}
+
+.main-icon:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    background-color: var(--bnt-hover-color);
+}
+
+.text-main p{
+    margin: 5px;
+    font-weight: 700;
+}
+
+.text-main h1{
+    margin: 5px;
+    font-weight: 900;
+    color: var(--text-color);
+}
+
+.text-main h3{
+    margin: 5px;
+}
+
 .text-main button{
     cursor: pointer;
     border: none;
-    padding: 10px 50px;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
     color: var(--text-light-color);
     background-color: var(--bnt-color);
 }
@@ -169,7 +230,7 @@ header{
 }
 
 .img-main{
-    width: 50%;
+    width: 40%;
 }
 
 .img-main img{
@@ -199,13 +260,18 @@ header{
 .text-sobre-mim{
     width: 50%;
     padding: 40px;
-    border: 2px solid var(--border-color);
+    border: 4px solid var(--bnt-color);
     border-radius: 40px;
     box-shadow: 2px 2px 1px var(--shadow-color);
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.5;
     color: var(--text-color);
-   /* background-color: var(--case-color);*/
+    background-color: var(--case-color);
+}
+
+.text-sobre-mim p{
+    font-weight: 700;
+    color: var(--text-normal-color);
 }
 
 /*-----------------------Sobre-mim-----------------------*/
@@ -258,6 +324,15 @@ header{
     transition: 1000ms;
 }
 
+.box-image{
+    position: relative;
+}
+
+.box-image img{
+    height: 195px;
+    width: 310px;
+}
+
 .conteudo{
     display: none;
     color: black;
@@ -283,6 +358,10 @@ header{
 
 .box:hover .conteudo, .box-hidden:hover .conteudo{
     display: block;
+}
+
+.box:hover .box-image, .box-hidden:hover .box-image{
+    display: none;
 }
 
 .box:hover,.box-hidden:hover{
@@ -331,68 +410,6 @@ header{
 }
 
 /*-----------------------projetos-----------------------*/
-
-/*-----------------------dados-projetos-----------------------*/
-
-#projeto1{
-    background-image: url(../image/telecall-front-end.png);
-    background-size: cover;
-}
-
-#projeto1:hover{
-    background-color: var(--box-color);
-    background-image: none;
-}
-
-/*------------------------------------------------------------*/
-
-#projeto2{
-    background-image: url(../image/);
-    background-size: cover;
-}
-
-#projeto2:hover{
-    background-color: var(--box-color);
-    background-image: none;
-}
-
-/*------------------------------------------------------------*/
-
-#projeto3{
-    background-image: url(../image/);
-    background-size: cover;
-}
-
-#projeto3:hover{
-    background-color: var(--box-color);
-    background-image: none;
-}
-
-/*------------------------------------------------------------*/
-
-#projeto4{
-    background-image: url(../image/);
-    background-size: cover;
-}
-
-#projeto4:hover{
-    background-color: var(--box-color);
-    background-image: none;
-}
-
-/*------------------------------------------------------------*/
-
-#projeto5{
-    background-image: url(../image/);
-    background-size: cover;
-}
-
-#projeto5:hover{
-    background-color: var(--box-color);
-    background-image: none;
-}
-
-/*-----------------------dados-projetos-----------------------*/
 
 /*-----------------------habilidades-----------------------*/
 
@@ -487,7 +504,7 @@ header{
 }
 
 .icon a i{
-    color: var(--text-color);
+    color: var(--bnt-color);
 }
 
 .img-icon{
