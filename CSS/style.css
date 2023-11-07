@@ -156,7 +156,7 @@ header{
     padding: 40px 280px 40px 40px;
     width: 50%;
     line-height: 1.2;
-    text-align: start;
+    text-align: center;
 }
 
 .moldura{
@@ -172,11 +172,15 @@ header{
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-links{
     padding: 5px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-icon{
@@ -528,16 +532,38 @@ footer{
 
 /*-----------------------responsivo-----------------------*/
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1280px) {
+
+    header{
+        width: 100%;
+    }
+
+    .main{
+        padding: 10px;
+        margin-top: 75px;
+    }
 
     .text-main{
-        padding: 40px 140px 40px 40px;
+        padding: 20px 190px 20px 20px;
+        width: 50%;
+    }
+
+    .img-main{
+        width: 40%;
+    }
+
+    .sobre-mim{
+        padding: 40px;
+    }
+
+    .img-sobre-mim{
+        margin: 10px;
     }
 
     .text-sobre-mim{
-        line-height: 1.2;
+        line-height: 1.5;
     }
-
+    
     .contato{
         width: 100%;
     }
@@ -546,6 +572,71 @@ footer{
         padding: 20px;
         width: 13rem;
         height: 10rem;
+        margin: 20px 10px 20px 10px;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+
+    header{
+        width: 100%;
+    }
+
+    .main{
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    .text-main{
+        padding: 10px;
+        width: 85%;
+    }
+
+    .img-main{
+        width: 90%;
+    }
+
+    .sobre-mim{
+        padding: 20px;
+    }
+
+    .img-sobre-mim{
+        width: 80%;
+        margin: 10px;
+    }
+
+    .text-sobre-mim{
+        line-height: 1.2;
+        width: 100%;
+    }
+
+    .projetos{
+        padding: 10px;
+    }
+
+    .em-breve{
+        transform: none;
+    }
+
+    .habilidades{
+        padding: 10px;
+    }
+
+    .box-case{
+        margin: 10px;
+        width: 8rem;
+    }
+    
+    .contato{
+        width: 100%;
+    }
+
+    .icon{
+        padding: 20px;
+        width: 13rem;
+        height: 10rem;
+        margin: 20px 10px 20px 10px;
     }
 }
 
@@ -572,7 +663,7 @@ footer{
         background-color: var(--body-color);
         height: 100vh;
         border: 1px solid var(--border-color);
-        width: 40%;
+        width: 55%;
         z-index: 999;
     }
 
@@ -585,17 +676,6 @@ footer{
     .text-main{
         padding: 10px;
         width: 85%;
-        text-align: center;
-    }
-
-    .main-links{
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-bnt{
-        align-items: center;
-        justify-content: center;
     }
 
     .img-main{
